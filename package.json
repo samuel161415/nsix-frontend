@@ -1,5 +1,5 @@
 {
-  "name": "nsix-frontend-app",
+  "name": "nuxt-app",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,10 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "start": "node .output/server/index.mjs"
-  },
-  "engines": {
-    "node": ">=18.0.0"
+    "start": "nuxt start"
   },
   "dependencies": {
     "@nuxt/image": "^1.8.1",
