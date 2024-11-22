@@ -38,7 +38,7 @@ const { locale } = useI18n();
 const { find } = useStrapi();
 
 // Define the base URL of your Strapi server
-const strapiBaseURL = "http://localhost:1337";
+const strapiBaseURL = process.env.STRAPI_URL;
 // Watch for changes in locale and fetch blog posts accordingly
 watchEffect(async () => {
   try {

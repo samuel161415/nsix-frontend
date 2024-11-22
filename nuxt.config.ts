@@ -25,7 +25,7 @@ export default defineNuxtConfig({
   ],
 
   strapi: {
-    url: process.env.STRAPI_URL || "http://localhost:1337",
+    url: process.env.STRAPI_URL,
   },
   // site: {
   //   url: 'https://www.template.com',

@@ -6,7 +6,7 @@ import Strapi, { StrapiLocale } from "strapi-sdk-js"
 interface StrapiPage {
     slug: string;
   }
-const STRAPI_URL = process.env.STRAPI_URL || 'http://localhost:1337'
+const STRAPI_URL = process.env.STRAPI_URL || 'https://strapi-backend-dp7a.onrender.com/'
 
 export default defineSitemapEventHandler(async () => {
     const strapi = new Strapi({
@@ -53,7 +53,7 @@ export default defineSitemapEventHandler(async () => {
       }
     }
   
-    // console.log(routes);
+   
     return routes;
 });
   

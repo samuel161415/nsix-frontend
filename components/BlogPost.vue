@@ -50,7 +50,6 @@ const route = useRoute()
 const theWholeRoute = route.params.slug;
 const slug = theWholeRoute?.slice(-1)[0] || "";
 
-// console.log("the slug route in the specific post",slug)
 
 // Fetch blog post based on slug and locale, and update SEO metadata
 watchEffect(async () => {
@@ -60,7 +59,7 @@ watchEffect(async () => {
       locale: locale.value,
       populate: "*",
     });
-    // console.log("response of each blog post",response?.data)
+   
 
     // Ensure response has data and only get the first blog post if available
     if (response.data.length === 0) {
@@ -77,7 +76,7 @@ watchEffect(async () => {
       published_date: attributes.published_date,
       description: attributes.description,
       cover_image: attributes.cover_image
-        ? `http://localhost:1337${attributes.cover_image.url}`
+        ? `${process.env.STRAPI_URL}${attributes.cover_image.url}`
         : null,
       content: attributes.content,
       seo_meta: attributes.seo_meta?.[0] || {},

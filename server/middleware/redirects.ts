@@ -1,7 +1,7 @@
 import { defineEventHandler, getRequestURL, sendRedirect } from "h3";
 import Strapi from "strapi-sdk-js";
 
-const STRAPI_URL = process.env.STRAPI_URL || "http://localhost:1337";
+const STRAPI_URL = process.env.STRAPI_URL;
 
 export default defineEventHandler(async (event) => {
   const urlObj = getRequestURL(event); // Get the current URL
