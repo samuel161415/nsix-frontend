@@ -20,7 +20,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxtjs/robots",
     "@nuxtjs/sitemap",
-    "@zadigetvoltaire/nuxt-gtm",
+    // "@zadigetvoltaire/nuxt-gtm",
     // '@nuxtjs/gtm',
   ],
 
