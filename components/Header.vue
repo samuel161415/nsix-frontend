@@ -1,5 +1,5 @@
 <template>
-  <header class="absolute top-0 left-0 w-full z-30 ">
+  <header class="absolute top-0 left-0 w-full z-30">
     <div class="flex justify-between items-center p-6 max-w-7xl mx-auto">
       <!-- Logo/Title -->
       <div class="text-2xl pb-1 font-[600] cursor-pointer">
@@ -16,15 +16,11 @@
           </span>
         </NuxtLink>
       </div>
-
-      <!-- Dropdown Button for Mobile -->
       <div class="lg:hidden">
         <button @click="toggleDropdown" class="focus:outline-none">
-        <!-- <NuxtImg v-if="dropdownOpen" format="webp" src="images/close.png" alt="open images" />
-        <NuxtImg v-else format="webp" src="images/menu.png" alt="close images" />
-         -->
+          <NuxtImg format="webp" src="/images/menu.png" height="20" width="20" alt="open images" />
           <!-- <img :src="dropdownOpen ? 'images/close.png' : 'images/menu.png'" alt="Menu imga" /> -->
-          <NuxtImg :src="dropdownOpen ? '/images/close.png' : '/images/menu.png'" alt="icon images" />
+          <!-- <NuxtImg :src="dropdownOpen ? '/images/menu.png' : '/images/close.png'" alt="icon images" /> -->
         </button>
       </div>
 
@@ -55,6 +51,7 @@
     </div>
 
     <!-- Mobile Dropdown Modal -->
+
     <div v-if="dropdownOpen" class="fixed inset-0 bg-black/50 z-30 lg:hidden">
       <!-- Header with Title and Close Button -->
       <div class="h-[60vh] bg-white w-full flex flex-col p-5">
@@ -64,7 +61,7 @@
             @click="toggleDropdown"
             class="hover:cursor-pointer focus:outline-none"
           >
-            <NuxtImg src="/images/close.png" alt="close icon" />
+            <NuxtImg height="20" width="20" format="webp" src="/images/close.png" alt="close icon" />
           </button>
         </div>
 
@@ -90,7 +87,7 @@
   </header>
 </template>
 
-<script setup >
+<script setup>
 import LanguageSwitcher from "./LanguageSwitcher.vue";
 import { ref } from "vue";
 
@@ -110,37 +107,33 @@ const tabs = ref([]);
 watchEffect(async () => {
   const homeData = await find("home", { locale: locale.value });
   const blogData = await find("blog-page", {
-    locale: locale.value ,
+    locale: locale.value,
   });
   const privacyata = await find("privacy-policy-page", {
-    locale: locale.value ,
+    locale: locale.value,
   });
   const referenceData = await find("reference-page", {
-    locale: locale.value ,
+    locale: locale.value,
   });
-
 
   tabs.value = [
     {
-      slug:  "",
+      slug: "",
       title: homeData?.data?.title || "Home",
     },
     {
-      slug: blogData?.data?.slug ,
-      title: blogData?.data?.title ,
+      slug: blogData?.data?.slug,
+      title: blogData?.data?.title,
     },
     {
-      slug: privacyata?.data?.slug ,
-      title: privacyata?.data?.title ,
+      slug: privacyata?.data?.slug,
+      title: privacyata?.data?.title,
     },
     {
-      slug: referenceData?.data?.slug ,
-      title: referenceData?.data?.title ,
+      slug: referenceData?.data?.slug,
+      title: referenceData?.data?.title,
     },
-
   ];
-
-
 });
 </script>
 

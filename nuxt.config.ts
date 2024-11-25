@@ -51,10 +51,7 @@ export default defineNuxtConfig({
   },
 
   image: {
-    domains: ["https://www.template.com"],
-    alias: {
-      ogImage: "https://www.template.com/og-image.jpg",
-    },
+  //  dir: 'assets/images'
   },
   sitemap: <Partial<SitemapOptions>>{
     hostname: "https://www.template.com",
