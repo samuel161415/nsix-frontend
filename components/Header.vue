@@ -20,7 +20,8 @@
       <!-- Dropdown Button for Mobile -->
       <div class="lg:hidden">
         <button @click="toggleDropdown" class="focus:outline-none">
-          <NuxtImg :src="dropdownOpen ? '/close.png' : '/menu.png'" />
+          <img :src="dropdownOpen ? '/close.png' : '/menu.png'" alt="Menu" />
+          <!-- <NuxtImg :src="dropdownOpen ? '/close.png' : '/menu.png'" /> -->
         </button>
       </div>
 
