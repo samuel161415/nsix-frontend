@@ -23,8 +23,8 @@
         <!-- <NuxtImg v-if="dropdownOpen" format="webp" src="images/close.png" alt="open images" />
         <NuxtImg v-else format="webp" src="images/menu.png" alt="close images" />
          -->
-          <img :src="dropdownOpen ? 'images/close.png' : 'images/menu.png'" alt="Menu imga" />
-          <!-- <NuxtImg :src="dropdownOpen ? 'images/close.png' : 'images/menu.png'" alt="icon images" /> -->
+          <!-- <img :src="dropdownOpen ? 'images/close.png' : 'images/menu.png'" alt="Menu imga" /> -->
+          <NuxtImg :src="dropdownOpen ? '/images/close.png' : '/images/menu.png'" alt="icon images" />
         </button>
       </div>
 
@@ -64,7 +64,7 @@
             @click="toggleDropdown"
             class="hover:cursor-pointer focus:outline-none"
           >
-            <NuxtImg src="images/close.png" alt="close icon" />
+            <NuxtImg src="/images/close.png" alt="close icon" />
           </button>
         </div>
 
