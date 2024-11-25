@@ -18,9 +18,8 @@
       </div>
       <div class="lg:hidden">
         <button @click="toggleDropdown" class="focus:outline-none">
-          <NuxtImg format="webp" src="/images/menu.png" height="20" width="20" alt="open images" />
-          <!-- <img :src="dropdownOpen ? 'images/close.png' : 'images/menu.png'" alt="Menu imga" /> -->
-          <!-- <NuxtImg :src="dropdownOpen ? '/images/menu.png' : '/images/close.png'" alt="icon images" /> -->
+          <!-- <NuxtImg format="webp" src="/images/menu.png" height="20" width="20" alt="open images" /> -->
+          <img src="/images/menu.png" alt="Menu imga" />
         </button>
       </div>
 
@@ -61,7 +60,8 @@
             @click="toggleDropdown"
             class="hover:cursor-pointer focus:outline-none"
           >
-            <NuxtImg height="20" width="20" format="webp" src="/images/close.png" alt="close icon" />
+          <img src="/images/close.png" alt="Menu imga" />
+            <!-- <NuxtImg height="20" width="20" format="webp" src="/images/close.png" alt="close icon" /> -->
           </button>
         </div>
 
