@@ -54,12 +54,12 @@ export default defineNuxtConfig({
   //  dir: 'assets/images'
   },
   sitemap: <Partial<SitemapOptions>>{
-    hostname: "https://www.template.com",
+    hostname: process.env.NUXT_PUBLIC_SITE_URL,
     sources: ["/api/__sitemap__/urls"],
   },
-  site: {
-    url: process.env.NUXT_PUBLIC_SITE_URL || 'https://www.template.com',
-  },
+  // site: {
+  //   url: process.env.NUXT_PUBLIC_SITE_URL || 'https://www.template.com',
+  // },
   runtimeConfig: {
     public: {
       gtm: {
