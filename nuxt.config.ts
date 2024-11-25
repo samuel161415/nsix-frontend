@@ -59,6 +59,9 @@ export default defineNuxtConfig({
     hostname: "https://www.template.com",
     sources: ["/api/__sitemap__/urls"],
   },
+  site: {
+    url: process.env.NUXT_PUBLIC_SITE_URL || 'https://www.template.com',
+  },
   runtimeConfig: {
     public: {
       gtm: {
