@@ -20,8 +20,11 @@
       <!-- Dropdown Button for Mobile -->
       <div class="lg:hidden">
         <button @click="toggleDropdown" class="focus:outline-none">
-          <img :src="dropdownOpen ? '/close.png' : '/menu.png'" alt="Menu" />
-          <!-- <NuxtImg :src="dropdownOpen ? '/close.png' : '/menu.png'" /> -->
+        <!-- <NuxtImg v-if="dropdownOpen" format="webp" src="images/close.png" alt="open images" />
+        <NuxtImg v-else format="webp" src="images/menu.png" alt="close images" />
+         -->
+          <img :src="dropdownOpen ? 'images/close.png' : 'images/menu.png'" alt="Menu imga" />
+          <!-- <NuxtImg :src="dropdownOpen ? 'images/close.png' : 'images/menu.png'" alt="icon images" /> -->
         </button>
       </div>
 
@@ -61,7 +64,7 @@
             @click="toggleDropdown"
             class="hover:cursor-pointer focus:outline-none"
           >
-            <NuxtImg src="/close.png" />
+            <NuxtImg src="images/close.png" alt="close icon" />
           </button>
         </div>
 
